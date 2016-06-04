@@ -1,0 +1,17 @@
+%div#header
+	%h1 Persons
+%div
+	%table#person_table.table.table-striped
+		%thead
+			%tr
+				%td First name & Last name
+				%td Email
+				%td Age
+				%td Action
+		%tbody
+		- @persons.each do |person|
+			%tr
+				%td= person.complete_name
+				%td= person.email
+				%td= person.age
+				%td
