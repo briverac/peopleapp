@@ -1,3 +1,4 @@
+#This class control the actions of the people's views
 class PeopleController < ApplicationController
 	include ActiveModel::ForbiddenAttributesProtection
 # Public: Get the actual age of a person based on his/her birthday

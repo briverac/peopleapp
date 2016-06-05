@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :people
 
+  #this route is needed to use the web ui of resque
   mount Resque::Server.new, at: "/resque"
 
 end

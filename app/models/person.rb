@@ -18,7 +18,13 @@ class Person < ActiveRecord::Base
 		today = Date.today
 		current_age = today.year - birthdate.year - ((today.month > birthdate.month || (today.month == birthdate.month && today.day >= birthdate.day)) ? 0 : 1)
 	end
-
+# Public: Get the complete name of a person
+#
+# Examples
+#   person.complete_name
+#   # => "Bryan Rivera"
+#
+# Returns the complete name of a person.
 	def complete_name
 		"#{first_name} #{last_name}"
 	end

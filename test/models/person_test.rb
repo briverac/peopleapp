@@ -64,4 +64,14 @@ describe Person do
 		FactoryGirl.build(:person, email: 'test@test.com').wont_be :valid?
 	end
 
+	it "should return the complete name of a person" do
+		person = FactoryGirl.build(:person, first_name: 'Bryan', last_name: 'Rivera')
+		assert_equal person.complete_name, 'Bryan Rivera'
+	end
+
+	it "should return the correct age of a person" do
+		person = FactoryGirl.build(:person, birthdate: 5.year.ago)
+		assert_equal person.age, 5
+	end
+
 end
