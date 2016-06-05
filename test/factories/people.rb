@@ -1,12 +1,12 @@
 FactoryGirl.define do
   factory :person do
-    first_name "MyString"
-    last_name "MyString"
-    email "MyString"
-    job "MyString"
-    bio "MyText"
-    gender 1
-    birthdate "2016-06-03"
-    picture "MyString"
+    first_name Faker::Name.first_name
+    last_name Faker::Name.last_name
+    email Faker::Internet.email
+    job Faker::Company.profession
+    bio Faker::Lorem.paragraph(5)
+    gender ['M','F'].sample
+    birthdate Faker::Date.between(60.years.ago, 1.day.ago)
+    picture Faker::Avatar.image
   end
 end

@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20160604053156) do
     t.string   "email",      limit: 254,   null: false
     t.string   "job",        limit: 75
     t.text     "bio",        limit: 65535
-    t.integer  "gender",     limit: 4
+    t.string   "gender",     limit: 255
     t.date     "birthdate",                null: false
     t.string   "picture",    limit: 255
     t.datetime "created_at",               null: false

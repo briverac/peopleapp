@@ -25,5 +25,8 @@ module Peopleapp
     config.generators do |g|
       g.test_framework :minitest, spec: true, fixture: false
     end
+
+    # add custom validators path
+    config.autoload_paths += %W["#{config.root}/app/validators/"]
   end
 end

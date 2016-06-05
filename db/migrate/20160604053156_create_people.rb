@@ -6,7 +6,7 @@ class CreatePeople < ActiveRecord::Migration
       t.string :email, limit: 254, null: false
       t.string :job, limit: 75
       t.text :bio
-      t.integer :gender
+      t.string :gender
       t.date :birthdate, null: false
       t.string :picture
 

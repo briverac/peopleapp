@@ -1,0 +1,24 @@
+.col-md-12
+	%h1 Edit Person
+	%div#personal-information
+		=semantic_form_for @person do |f|
+			.form-group.padding-top
+				.row
+					.col-md-4
+						= f.input :first_name
+					.col-md-4
+						= f.input :last_name
+					.col-md-4
+						= f.input :email
+				.row
+					.col-md-4
+						= f.input :gender, as: :select, collection: ["Male", "Female"]
+					.col-md-4
+						= f.input :job
+					.col-md-4
+						= f.input :birthdate, start_year: 1916, end_year: Date.today.year, order: [:month, :day, :year]
+				= f.input :bio, input_html: { rows: 3 } 
+				= f.input :picture
+			.form-group
+				= f.action :cancel
+				= f.action :submit, button_html: {class: 'btn btn-primary'}

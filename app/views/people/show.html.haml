@@ -1,0 +1,33 @@
+.col-md-12
+	%div
+		%h1 Personal information
+	%div#personal-information
+		%div.padding-top
+			%div
+				%h5.float-left First name:
+				%p.padding-left=	@person.first_name
+			%div
+				%h5.float-left Last name:
+				%p.padding-left=	@person.last_name
+			%div
+				%h5.float-left Email:
+				%p.padding-left=	@person.email
+			%div
+				%h5.float-left Job:
+				%p.padding-left=	@person.job
+			%div
+				%h5.float-left Bio:
+				%p.padding-left=	@person.bio
+			%div
+				%h5.float-left Gender:
+				%p.padding-left=	@person.gender
+			%div
+				%h5.float-left Birthdate: 
+				%p.padding-left=	@person.birthdate
+			%div
+				%h5.float-left Picture:
+				%p.padding-left=	@person.picture
+
+	%div
+		=link_to 'Cancel', people_path, class: 'btn btn-secondary'
+		=link_to 'Edit', edit_person_path(@person), class: 'btn btn-primary'

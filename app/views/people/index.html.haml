@@ -1,17 +1,29 @@
-%div#header
-	%h1 Persons
-%div
-	%table#person_table.table.table-striped
-		%thead
-			%tr
-				%td First name & Last name
-				%td Email
-				%td Age
-				%td Action
-		%tbody
-		- @persons.each do |person|
-			%tr
-				%td= person.complete_name
-				%td= person.email
-				%td= person.age
-				%td
+.col-md-12
+	%div#header
+		.row
+			.col-md-10
+				%h1 People
+			.col-md-2
+				=link_to 'Create', new_person_path, class: 'btn btn-primary pull-right', remote: true
+
+	%div.table-responsive
+		%table#person_table.table.table-striped.table-bordered
+			%thead
+				%tr
+					%td First name & Last name
+					%td Email
+					%td Age
+					%td Delete
+			%tbody
+			- @people.each do |person|
+				%tr
+					%td= link_to person.complete_name, person_path(person)
+					%td= person.email
+					%td= person.age
+					%td
+						= link_to '', edit_person_path(person), class: 'fa fa-pencil-square-o' 
+						= link_to '', person_path(person), class: 'fa fa-times', method: :delete, data: {confirm: "¿Are you sure?"}
+
+
+
+= render 'modal_people'

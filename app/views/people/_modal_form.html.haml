@@ -1,0 +1,25 @@
+=semantic_form_for @person, remote: true do |f|
+	.modal-header
+		%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+		%h3.modal-title Create new Person
+	.modal-body
+		.modal-body-content
+			.form-group
+				.row
+					.col-md-6	
+						= f.input :first_name
+					.col-md-6
+						= f.input :last_name
+				= f.input :email
+				.row
+					.col-md-4	
+						= f.input :gender, as: :select, collection: ["Male", "Female"]
+					.col-md-8
+						= f.input :job
+				= f.input :bio, input_html: { rows: 3 } 
+				= f.input :birthdate, start_year: 1916, end_year: Date.today.year, order: [:month, :day, :year]
+				= f.input :picture
+		.modal-footer
+			.form-group
+				= f.action :cancel
+				= f.action :submit, button_html: {class: 'btn btn-primary pull-right'}

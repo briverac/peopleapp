@@ -11,12 +11,20 @@ gem "haml-rails"
 gem 'tomdoc'
 # Use to create the unit tests
 gem 'minitest-rails'
+#Use to run background jobs
+gem 'resque'
 # Use for create fake data
 gem 'faker'
 # Use for make html good better
 gem 'bootstrap'
-# Use to validates emails
-gem 'email_validator'
+# Use for make forms look better
+gem 'formtastic-bootstrap'
+# Use for icons
+gem "font-awesome-rails"
+# Use to creates popovers
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
