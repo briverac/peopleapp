@@ -11,8 +11,10 @@ gem "haml-rails"
 gem 'tomdoc'
 # Use to create the unit tests
 gem 'minitest-rails'
-#Use to run background jobs
+# Use to run background jobs
 gem 'resque'
+# Use to send emails with resque
+gem 'resque_mailer'
 # Use for create fake data
 gem 'faker'
 # Use for make html good better

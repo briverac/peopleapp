@@ -1,0 +1,10 @@
+%div
+	- first_name = @person["first_name"]
+	- last_name = @person["last_name"]
+	%p= "Hello #{first_name} #{last_name}"
+	- first_name = @created_person["first_name"]
+	- last_name = @created_person["last_name"]
+	%p= "Please notice that #{first_name} #{last_name} has joined the application"
+	%p Thanks for using the system
+	%p Regards,
+	%p People System

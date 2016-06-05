@@ -22,7 +22,10 @@ class PeopleController < ApplicationController
 	def create
 		@person = Person.new(person_params)
 		if @person.save
-			
+			@people = Person.all
+			@people.each do |person|
+				PersonMailer.new_person(@person,person).deliver
+			end
 		else
 			render :new
 		end
@@ -43,6 +46,10 @@ class PeopleController < ApplicationController
 
 	def destroy
 		@person = Person.find(params[:id])
+		@people = Person.all
+		@people.each do |person|
+			PersonMailer.deleted_person(@person,person).deliver
+		end
 		@person.destroy
 		redirect_to people_path
 	end

@@ -5,7 +5,7 @@ class Person < ActiveRecord::Base
 	validates :job, length: {maximum: 75}
 	validates :birthdate, presence: true, past_date: true
 	validates_inclusion_of :gender, :in => %w( Male Female ), message: 'must choose'
-	validates :picture, url: true
+	validates :picture, url: true, presence: true
 
 # Public: Get the actual age of a person based on his/her birthday
 #
