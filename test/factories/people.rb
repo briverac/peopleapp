@@ -5,7 +5,7 @@ FactoryGirl.define do
     email Faker::Internet.email
     job Faker::Company.profession
     bio Faker::Lorem.paragraph(5)
-    gender ['M','F'].sample
+    gender ['Male','Female'].sample
     birthdate Faker::Date.between(60.years.ago, 1.day.ago)
     picture Faker::Avatar.image
   end
