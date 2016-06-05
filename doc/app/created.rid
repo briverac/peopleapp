@@ -1,0 +1,12 @@
+Sun, 05 Jun 2016 16:36:38 -0600
+README.rdoc	Sun, 05 Jun 2016 16:34:53 -0600
+app/controllers/application_controller.rb	Fri, 03 Jun 2016 20:35:38 -0600
+app/controllers/people_controller.rb	Sun, 05 Jun 2016 16:36:20 -0600
+app/helpers/application_helper.rb	Fri, 03 Jun 2016 20:35:38 -0600
+app/helpers/people_helper.rb	Fri, 03 Jun 2016 23:35:00 -0600
+app/mailers/application_mailer.rb	Sat, 04 Jun 2016 22:16:21 -0600
+app/mailers/person_mailer.rb	Sun, 05 Jun 2016 15:07:31 -0600
+app/models/person.rb	Sun, 05 Jun 2016 15:02:57 -0600
+app/validators/email_validator.rb	Sun, 05 Jun 2016 14:54:54 -0600
+app/validators/past_date_validator.rb	Sun, 05 Jun 2016 14:58:24 -0600
+app/validators/url_validator.rb	Sun, 05 Jun 2016 14:57:24 -0600
